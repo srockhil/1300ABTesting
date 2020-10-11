@@ -190,7 +190,8 @@
             numInCart = parseInt(document.getElementById(el.id + '-added').textContent, 0);
             url += ('&' + el.id + '=' + numInCart)
           })
-          document.location = url;
+          // document.location = url;
+          window.location.href = '/checkout';
         }
 
         function sendData(timeLoaded, clickTime, clickObjectID, cook){

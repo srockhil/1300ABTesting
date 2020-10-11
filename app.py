@@ -72,6 +72,9 @@ def get_data():
             version, page_load_time, click_time, click_obj_id, unique_session_id])
     return "OK"
 
+@app.route('/checkout', methods=['GET'])
+def get_cart():
+    return render_template('checkout.html')
 
 # DO NOT CHANGE ANYTHING HERE
 # You might run into issues changing things here
