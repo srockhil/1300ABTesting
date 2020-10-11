@@ -188,7 +188,7 @@
           params = 'version=A';
           Array.from(document.getElementsByClassName('vendor-wrapper')).forEach(el => {
             numInCart = parseInt(document.getElementById(el.id + '-added').textContent, 0);
-            url += ('&' + el.id + '=' + numInCart)
+            params += ('&' + el.id + '=' + numInCart)
           })
           window.location.href = '/checkout?' + params;
         }
