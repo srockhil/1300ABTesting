@@ -33,7 +33,7 @@ app.static_folder = 'static'
 # This is the root endpoint.
 @app.route('/', methods=['GET'])
 def root():
-    version = request.args.get('version', default='', type=string)
+    version = request.args.get('version', default='', type=str)
     if version:
         page = version + '.html'
         return render_template(page)
