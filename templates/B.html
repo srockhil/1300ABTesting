@@ -55,7 +55,7 @@
     <title>cact-I + cact-you = cact-us</title>
   </head>
 
-  <body style="background-color: pink">
+  <body >
     <header>
       <h1>cact-I + cact-you = cact-us</h1>
       <!-- Ideas: making it pretty/look real, making it look reliable,
@@ -70,57 +70,80 @@
     <!-- If you add any new buttons, you need to update the javascript file, for
     corresponding button id, so that clicks of that button could be logged -->
     <div class="content-pane">
-      <div class="vendor-wrapper" id="mp1">
-        <img src="../static/coppercombo.png" class="vendor-photo" />
-        <button class="vendor-book-button btn btn-primary" type="submit" id="mp1">
-          Add To Cart
-        </button>
-        <span><span id="mp1-added">0</span> in cart</span>
-        <p>Stunning succulent combo, featuring 3 adolescent cacti in
-          industrial copper pots. <i>$9.99</i>
-        </p>
-      </div>
 
-      <div class="vendor-wrapper" id="mp2">
-        <img src="../static/geoprickly.jpg" class="vendor-photo" />
-        <button class="vendor-book-button btn btn-primary" type="submit" id="mp2">
-          Add To Cart
-        </button>
-        <span><span id="mp2-added">0</span> in cart</span>
-        <p>Beautiful prickly pair in modern geometric pots. <i>$14.99</i>
-        </p>
-      </div>
-
-      <div class="vendor-wrapper" id="mp3">
-        <img src="../static/garden.jpg" class="vendor-photo" />
-        <button class="vendor-book-button btn btn-primary" type="submit" id="mp3">
-          Add To Cart
-        </button>
-        <span><span id="mp3-added">0</span> in cart</span>
-        <p>Cacti and succulent mini-garden in a congenial and rustic pot. <i>$25.99</i>
-        </p>
-      </div>
-
-      <div class="vendor-wrapper" id="mp4">
-        <img src="../static/garden-combo.jpg" class="vendor-photo" />
-        <button class="vendor-book-button btn btn-primary" type="submit" id="mp4">
-          Add To Cart
-        </button>
-        <span><span id="mp4-added">0</span> in cart</span>
-        <p>Cacti, succulent, and garden combo in handcrafted pots. <i>$34.99</i>
-        </p>
-      </div>
-
-      <div id="cart-wrapper">
+      <div id="cart-wrapper" style="float: right">
         <a onclick='navigateToCheckout()'>
         <span id="cart" class="fa-stack fa-2x has-badge" data-count="0">
           <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
           <i class="fa fa-shopping-cart fa-stack-2x red-cart"></i>
         </span> CART
-      </a>
+        </a>
       </div>
+
+
+
+
+      <div class="vendor-wrapper" id="mp1">
+        <p style="font-size: large">Stunning succulent combo, featuring 3 adolescent cacti in
+          industrial copper pots. <b>$9.99</b></p>
+        <img src="../static/coppercombo.png" style="width: 40vw; height: auto" />
+        <br>
+        <button class="vendor-book-button btn btn-primary" type="submit" id="mp1"
+                style="background-color: lawngreen; color: black; margin-top: 10px">
+          Add To Cart
+        </button>
+        <span><span id="mp1-added">0</span> in cart</span>
+
+
+      </div>
+
+      <div class="vendor-wrapper" id="mp2">
+
+        <p  style="font-size: large">Beautiful prickly pair in modern geometric pots. <b>$14.99</b>
+        </p>
+        <img src="../static/geoprickly.jpg" style="width: 40vw; height: auto" />
+        <br>
+        <button class="vendor-book-button btn btn-primary" type="submit" id="mp2"
+                style="background-color: lawngreen; color: black; margin-top: 10px">
+          Add To Cart
+        </button>
+        <span><span id="mp2-added">0</span> in cart</span>
+
+      </div>
+
+      <div class="vendor-wrapper" id="mp3">
+
+        <p  style="font-size: large">Cacti and succulent mini-garden in a congenial and rustic pot. <b>$25.99</b>
+        </p>
+
+        <img src="../static/garden.jpg" style="width: 40vw; height: auto" /><br>
+        <button class="vendor-book-button btn btn-primary" type="submit" id="mp3"
+                style="background-color: lawngreen; color: black; margin-top: 10px">
+          Add To Cart
+        </button>
+        <span><span id="mp3-added">0</span> in cart</span>
+
+      </div>
+
+      <div class="vendor-wrapper" id="mp4">
+        <p  style="font-size: large">Cacti, succulent, and garden combo in handcrafted pots. <b>$34.99</b>
+        </p>
+
+
+        <img src="../static/garden-combo.jpg" style="width: 40vw; height: auto" />
+        <br>
+        <button class="vendor-book-button btn btn-primary" type="submit" id="mp4"
+                style="background-color: lawngreen; color: black; margin-top: 10px">
+          Add To Cart
+        </button>
+        <span><span id="mp4-added">0</span> in cart</span>
+
+      </div>
+
+
     </div>
 
+    <!-- DO NOT EDIT below this line!! -->
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script>
         var timeLoaded = Date.now()
