@@ -76,8 +76,10 @@
         <span id="cart" class="fa-stack fa-2x has-badge" data-count="0">
           <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
           <i class="fa fa-shopping-cart fa-stack-2x red-cart"></i>
-        </span> CART
+        </span> CHECKOUT
         </a>
+          <br>
+          <span id="cart-total" style="font-size: medium"> Total: 0.00  </span>
       </div>
 
 
@@ -151,22 +153,22 @@
 
         $("#mp1").on("click", function(d) {
               logClick('mp1')
-              addToCart('mp1');
+              addToCart('mp1',9.99);
         })
 
         $("#mp2").on("click", function(d) {
               logClick('mp2')
-              addToCart('mp2');
+              addToCart('mp2',14.99);
         })
 
         $("#mp3").on("click", function(d) {
               logClick('mp3')
-              addToCart('mp3');
+              addToCart('mp3',25.99);
         })
 
         $("#mp4").on("click", function(d) {
               logClick('mp4')
-              addToCart('mp4');
+              addToCart('mp4',34.99);
         })
 
         function logClick(clickObjectID) {
@@ -176,7 +178,10 @@
         }
 
         // Adds item with given id to the cart.
-        function addToCart(item, num = 1) {
+        function addToCart(item,price, num = 1) {
+          let total = int(document.getElementById("cart-total").innerHTML.split(":")[1])
+          total += price
+            document.getElementById("cart-total").innerHTML = "Total: " + total.toString()
           countId = item + "-added";
           document.getElementById(countId).textContent = parseInt(document.getElementById(countId).textContent, 0) + num;
           incrementCartCount(val = num);
